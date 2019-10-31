@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+mongoose.plugin(schema => { schema.options.usePushEach = true });
 
 const SongSchema = new Schema({
   title: { type: String },
